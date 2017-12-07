@@ -23,6 +23,8 @@ class tableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func getData() {
         let query = PFQuery(className: "tadilat")
+        
+        
         query.findObjectsInBackground  { (objects, error) in
             if error != nil {
                 let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
